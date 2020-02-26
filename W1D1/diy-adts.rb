@@ -21,8 +21,35 @@ class Stack
   end
 end
 
-s = Stack.new
-s.push(1)
-s.push(2)
-s.pop
-p s.peek
+# s = Stack.new
+# s.push(1)
+# s.push(2)
+# s.pop
+# p s.peek
+
+
+#Ex 2 Queue
+class Queue
+    def initialize
+        @queue = []
+    end
+
+    def enqueue(el)
+        @queue << el
+    end
+
+    def dequeue
+        @queue.shift
+    end
+
+    def peek
+        @queue[0]
+    end
+end
+
+q = Queue.new
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+q.dequeue
+p q.peek
